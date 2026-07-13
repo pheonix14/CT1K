@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: ct1k-streamer
+    env: docker
+    plan: starter
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: YOUTUBE_STREAM_KEY
+        sync: false
+      - key: REFRESH_RATE_MS
+        value: 30000
